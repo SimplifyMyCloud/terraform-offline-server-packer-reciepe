@@ -6,7 +6,7 @@ source "googlecompute" "terraform-offline" {
   use_os_login            = true
   zone                    = "us-west1-c"
   subnetwork              = "smc-dev-subnet-01"
-  image_name              = "terraform-offline"
+  image_name              = "terraform-offline-v01"
   image_description       = "Terraform server v.0.1"
   image_storage_locations = ["us-west1"]
 }
@@ -19,6 +19,8 @@ build {
       "sudo dnf install unzip -y",
       "sudo dnf install wget -y",
       "sudo dnf install git -y",
+      "sudo gsutil cp gs://smc-artifact-shelf/terraform/terraform /usr/local/bin/.",
+      "sudo chmod 0755 /usr/local/bin/terraform",
     ]
   }
 }
