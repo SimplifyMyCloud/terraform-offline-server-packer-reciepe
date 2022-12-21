@@ -15,10 +15,10 @@ build {
   sources = ["sources.googlecompute.terraform-offline"]
   provisioner "shell" {
     inline = [
-      "sudo dnf update -y",
-      "sudo dnf install unzip -y",
-      "sudo dnf install wget -y",
-      "sudo dnf install git -y",
+      #"sudo dnf update -y",
+      #"sudo dnf install unzip -y",
+      #"sudo dnf install wget -y",
+      #"sudo dnf install git -y",
       "sudo gsutil cp gs://smc-artifact-shelf/terraform/terraform /usr/local/bin/.",
       "sudo chmod 0755 /usr/local/bin/terraform",
       "mkdir -p ~/.terraform.d/plugins/registry.terraform.io/hashicorp/google/4.46.0/linux_amd64",
