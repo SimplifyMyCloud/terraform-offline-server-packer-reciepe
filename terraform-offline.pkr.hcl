@@ -22,7 +22,8 @@ build {
       "sudo adduser terra",
       "sudo gsutil cp gs://smc-artifact-shelf/terraform/terraform /usr/local/bin/.",
       "sudo chmod 0755 /usr/local/bin/terraform",
-      "mkdir -p /home/terra/.terraform.d/plugins/registry.terraform.io/hashicorp/google/4.46.0/linux_amd64",
+      "sudo mkdir -p /home/terra/.terraform.d/plugins/registry.terraform.io/hashicorp/google/4.46.0/linux_amd64",
+      "sudo chown -R terra:terra /home/terra/",
       "sudo gsutil cp gs://smc-artifact-shelf/gcp-provider-terraform/terraform-provider-google_v4.46.0_x5 /home/terra/.terraform.d/plugins/registry.terraform.io/hashicorp/google/4.46.0/linux_amd64/.",
     ]
   }
