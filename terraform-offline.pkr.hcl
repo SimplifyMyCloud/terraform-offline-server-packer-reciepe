@@ -6,7 +6,7 @@ source "googlecompute" "terraform-offline" {
   use_os_login            = true
   zone                    = "us-west1-c"
   subnetwork              = "smc-dev-subnet-01"
-  image_name              = "terraform-offline-v01"
+  image_name              = "terraform-offline-v02"
   image_description       = "Terraform server v.0.1"
   image_storage_locations = ["us-west1"]
 }
